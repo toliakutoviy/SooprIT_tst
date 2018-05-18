@@ -5,17 +5,29 @@
   "main": "bin/www.js",
   "scripts": {
     "start:dev": "nodemon ./bin/www.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www.js production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "_moduleAliases": {
+    "@model": "./server/models",
+    "@controllers": "./server/controllers",
+    "@routes": "./server/routes",
+    "@config": "./server/config/config.json"
+  },
   "dependencies": {
+    "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "module-alias": "^2.0.6",
     "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.37.7"
+    "sequelize": "^4.37.7",
+    "validator": "^10.2.0"
   }
 }
